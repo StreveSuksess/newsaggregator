@@ -66,12 +66,10 @@ CREATE TABLE change_history (
     PRIMARY KEY (id)
 );
 
--- Create indexes
 CREATE INDEX idx_change_history_entity ON change_history(entity_type, entity_id);
 CREATE INDEX idx_change_history_type ON change_history(type);
 CREATE INDEX idx_change_history_created_at ON change_history(created_at);
 
--- Insert initial data
 INSERT INTO category (name) VALUES 
 ('Политика'),
 ('Экономика'),
